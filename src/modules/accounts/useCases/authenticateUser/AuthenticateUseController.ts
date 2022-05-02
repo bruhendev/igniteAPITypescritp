@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { container } from "tsyringe";
-import { AuthenticateUserCase } from "./AuthenticateUseCase";
+import { AuthenticateUserUserCase } from "./AuthenticateUserUseCase";
 
 
 class AuthenticateUseController {
@@ -8,7 +8,7 @@ class AuthenticateUseController {
     async handle(request: Request, response: Response) {
         const { password, email } = request.body;
 
-        const authenticateUserCase = container.resolve(AuthenticateUserCase);
+        const authenticateUserCase = container.resolve(AuthenticateUserUserCase);
 
         const token = await authenticateUserCase.execute({password, email});
 
