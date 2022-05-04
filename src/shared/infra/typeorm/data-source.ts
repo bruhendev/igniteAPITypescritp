@@ -7,7 +7,7 @@ export const AppDataSource = new DataSource({
     username: "root",
     password: "123456",
     database: "rentx",
-    migrations: ["./src/database/migrations/*.ts"],
+    migrations: ["./src/shared/infra/typeorm/migrations/*.ts"],
     entities: [
         "./src/modules/cars/entities/*.ts",
         "./src/modules/accounts/entities/*.ts"

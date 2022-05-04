@@ -1,5 +1,5 @@
 import { Category } from "@modules/cars/entities/Category";
-import { AppDataSource } from "../../../../shared/http/database/data-source";
+import { AppDataSource } from "@shared/infra/typeorm/data-source";
 import { ICategoriesRepository, ICreateCategoryDTO } from "@modules/cars/repositories/ICategoriesRepository";
 
 class CategoriesRepository implements ICategoriesRepository {
