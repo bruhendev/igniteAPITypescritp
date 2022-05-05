@@ -1,7 +1,7 @@
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from "typeorm"
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity("categories")
-export class Category {
+class Category {
 
     @PrimaryGeneratedColumn()
     id: number;
@@ -16,3 +16,5 @@ export class Category {
     created_at: Date;
 
 }
+
+export { Category }

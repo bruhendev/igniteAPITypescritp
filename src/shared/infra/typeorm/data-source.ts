@@ -9,8 +9,9 @@ export const AppDataSource = new DataSource({
     database: "rentx",
     migrations: ["./src/shared/infra/typeorm/migrations/*.ts"],
     entities: [
+        "./src/modules/cars/infra/typeorm/entities/*.ts",
         "./src/modules/cars/entities/*.ts",
-        "./src/modules/accounts/entities/*.ts"
+        "./src/modules/accounts/entities/*.ts",
     ],
 })
 
