@@ -10,14 +10,14 @@ class SpecificationRepository implements ISpecificationRepository {
     constructor() {
         this.repository = AppDataSource.getRepository(Specification)
     }
-
+        
     async create({ description, name }: ICreateSpecificationRepositoryDTO) {
         const specification = this.repository.create({
             name,
             description
         })
 
-        await this.repository.save(specification);
+        return await this.repository.save(specification);
     }
 
     async list() {
@@ -28,6 +28,11 @@ class SpecificationRepository implements ISpecificationRepository {
     async findByName(name: string) {
         const specification = await this.repository.findOne({ where: { name } });
         return specification
+    }
+
+    async findByIds(ids: string[]): Promise<Specification[]> {
+        const specifications = await this.repository.findByIds(ids)
+        return specifications
     }
 
 }
