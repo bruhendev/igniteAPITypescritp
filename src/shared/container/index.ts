@@ -3,11 +3,11 @@ import { UsersRepository } from "../../modules/accounts/infra/typeorm/repositori
 import { IUsersRepository } from "../../modules/accounts/repositories/IUsersRepository";
 
 import { ICategoriesRepository } from "../../modules/cars/repositories/ICategoriesRepository"
-import { CategoriesRepository } from "@modules/cars/infra/repositories/CategoriesRepository";
-import { SpecificationRepository } from "../../modules/cars/infra/repositories/SpecificationRepository";
+import { CategoriesRepository } from "@modules/cars/infra/typeorm/repositories/CategoriesRepository";
+import { SpecificationRepository } from "../../modules/cars/infra/typeorm/repositories/SpecificationRepository";
 import { ISpecificationRepository } from "../../modules/cars/repositories/ISpecificationRepository";
 import { ICarsRepository } from "@modules/cars/repositories/ICarsRepository";
-import { CarsRepository } from "@modules/cars/infra/repositories/CarsRepository";
+import { CarsRepository } from "@modules/cars/infra/typeorm/repositories/CarsRepository";
 
 
 container.registerSingleton<ICategoriesRepository>(
